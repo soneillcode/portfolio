@@ -1,6 +1,8 @@
 body {
     background-image: url("assets/header-img-1.jpeg");
     background-size: 100%;
+    font-family: Helvetica;
+    color: white;
 }
 
 h1 {
@@ -12,24 +14,33 @@ h1 {
 
 h3 {
     padding: 12px 32px;
-    margin: 16px;
+    margin: 8px;
 }
 
 .header-text {
-    font-family: Helvetica;
-    background-color: rgba(255, 255, 255, 0.21);
-    color: white;
+    /*background-color: rgba(255, 255, 255, 0.21);*/
+    border: 1px solid rgba(255, 255, 255, 0.5);
     width: fit-content;
+    margin: 8px
 }
 
 header {
-    margin: 0 auto;
+    margin: 16px auto;
     width: 1024px;
+    height: 480px;
 }
+
 nav {
-    margin: 0 auto;
+    margin: 16px auto;
     width: 1280px;
-    height: 42px;
     display: flex;
     justify-content: flex-end;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.nav-link {
+    padding: 12px 24px;
+    margin: 8px;
+    font-weight: 300;
+    border: 1px solid rgba(255, 255, 255, 0.5);
 }
