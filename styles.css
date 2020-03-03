@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-image: url("assets/header-img-1.jpeg");
     background-size: 100%;
@@ -20,7 +24,6 @@ h3 {
 }
 
 .header-text {
-    /*background-color: rgba(255, 255, 255, 0.21);*/
     border: 1px solid rgba(255, 255, 255, 0.5);
     width: fit-content;
     margin: 8px
@@ -80,15 +83,6 @@ h2 {
     justify-content: flex-end;
 }
 
-.contact-title {
-    /*display: flex;*/
-    /*justify-content: center;*/
-}
-
-p {
-    width: 360px;
-}
-
 .about-me {
     display: flex;
     justify-content: flex-end;
@@ -98,4 +92,53 @@ p {
     border: 1px solid rgba(255, 255, 255, 0.5);
     width: fit-content;
     padding: 12px 24px;
+}
+
+/* PROJECT SECTION */
+.projects-container {
+    display: flex;
+}
+
+.project-item {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 360px;
+}
+
+.project-title {
+    padding: 12px 0;
+    font-size: 20px;
+}
+
+.project-img {
+    width: 100%;
+    border: 1px solid white;
+}
+
+h4 {
+    font-weight: 300;
+}
+
+.project-link {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 8px 18px;
+    border: 1px solid white;
+    width: fit-content;
+    align-self: flex-end;
+    font-weight: 600;
+    font-size: 22px;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 1000px) {
+    .projects-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
