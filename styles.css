@@ -2,6 +2,7 @@ body {
     background-image: url("assets/header-img-1.jpeg");
     background-size: 100%;
     font-family: Helvetica;
+    font-weight: 300;
     color: white;
 }
 
@@ -15,6 +16,7 @@ h1 {
 h3 {
     padding: 12px 32px;
     margin: 8px;
+    font-weight: 300;
 }
 
 .header-text {
@@ -43,4 +45,36 @@ nav {
     margin: 8px;
     font-weight: 300;
     border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+section {
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    margin: 16px auto;
+    width: 1024px;
+    height: 480px;
+}
+
+h2 {
+    font-weight: 300;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    width: fit-content;
+    padding: 12px 24px;
+    margin: 12px auto;
+}
+
+p {
+    width: 360px;
+}
+
+.about-me {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.about-me-content {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    width: fit-content;
+    padding: 12px 24px;
 }
