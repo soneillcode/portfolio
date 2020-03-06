@@ -3,51 +3,11 @@
 }
 
 body {
-    background-image: url("assets/header-img-1.jpeg");
+    background-image: url("assets/background.jpeg");
     background-size: 100%;
-    font-family: Helvetica;
+    font-family: Helvetica, serif;
     font-weight: 300;
     color: white;
-}
-
-h1 {
-    font-weight: 300;
-    font-size: 64px;
-    padding: 24px 48px;
-    margin: 0;
-}
-
-h3 {
-    padding: 12px 32px;
-    margin: 8px;
-    font-weight: 300;
-}
-
-.header-text {
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    width: fit-content;
-    margin: 8px
-}
-
-header {
-    margin: 16px auto;
-    width: 1024px;
-    height: 480px;
-}
-
-nav {
-    margin: 16px auto;
-    width: 80%;
-    display: flex;
-    justify-content: flex-end;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-}
-
-.nav-link {
-    padding: 12px 24px;
-    margin: 8px;
-    font-weight: 300;
-    border: 1px solid rgba(255, 255, 255, 0.5);
 }
 
 section {
@@ -57,17 +17,101 @@ section {
 }
 
 @media (max-width: 800px) {
-    header {
-        width: 480px;
-        height: 240px;
-    }
     section {
         width: 480px;
     }
+}
+
+/**** NAV SECTION ****/
+
+nav {
+    margin: 16px auto;
+    width: 80%;
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 800px) {
     nav {
         justify-content: center;
     }
 }
+
+nav:hover .nav-link {
+    color: black;
+    background-color: white;
+}
+
+.nav-link {
+    padding: 12px 24px;
+    margin: 8px;
+    font-weight: 300;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    color: white;
+}
+
+nav .nav-link:hover {
+    color: white;
+    background-color: #f8278c;
+    border-color: #f8278c;
+    text-shadow: 2px 2px black;
+    box-shadow: 4px 4px black;
+}
+
+/**** HEADER SECTION ****/
+
+h1 {
+    font-weight: 300;
+    font-size: 64px;
+    padding: 24px 48px;
+    margin: 0;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+header:hover h1 {
+    color: white;
+    background-color: #f8278c;
+    border: #f8278c;
+    text-shadow: 4px 4px black;
+    box-shadow: 8px 8px black;
+}
+
+.self-description {
+    padding: 12px 32px;
+    font-weight: 300;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+header:hover .self-description {
+    color: black;
+    background-color: white;
+    border-color: white;
+}
+
+.header-text {
+    margin: 8px;
+    width: fit-content;
+}
+
+header {
+    margin: 16px auto;
+    width: 1024px;
+    height: 480px;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 800px) {
+    header {
+        width: 480px;
+        height: 240px;
+    }
+}
+
+
+/**** ABOUT SECTION ****/
 
 h2 {
     font-weight: 300;
@@ -78,7 +122,15 @@ h2 {
     margin: 20px 0;
 }
 
-.about-title {
+section:hover .about-title {
+    color: white;
+    background-color: #f8278c;
+    border-color: #f8278c;
+    box-shadow: 4px 4px black;
+    text-shadow: 2px 2px black;
+}
+
+.about-title-container {
     display: flex;
     justify-content: flex-end;
 }
@@ -94,9 +146,25 @@ h2 {
     padding: 12px 24px;
 }
 
-/* PROJECT SECTION */
+section:hover .about-me-content {
+    color: black;
+    background-color: white;
+}
+
+/**** PROJECT SECTION ****/
+
 .projects-container {
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+section:hover h2 {
+    color: white;
+    background-color: #f8278c;
+    border-color: #f8278c;
+    text-shadow: 2px 2px black;
+    box-shadow: 4px 4px black;
 }
 
 .project-item {
@@ -107,6 +175,32 @@ h2 {
     flex-direction: column;
     justify-content: space-between;
     width: 360px;
+    color: black;
+    background-color: white;
+}
+
+section:hover .project-link {
+    color: black;
+    background-color: white;
+    border-color: black;
+}
+
+section .project-item:hover {
+    color: white;
+    background-color: #f8278c;
+    border-color: #f8278c;
+}
+
+.project-item:hover .project-link {
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.project-item:hover .project-link:hover {
+    border: 1px solid #00ffba;
+    color: #00ffba;
+    background-color: #f8278c;
 }
 
 .project-title {
@@ -116,29 +210,17 @@ h2 {
 
 .project-img {
     width: 100%;
-    border: 1px solid white;
-}
-
-h4 {
-    font-weight: 300;
 }
 
 .project-link {
     text-decoration: none;
-    color: #ffffff;
     padding: 8px 18px;
-    border: 1px solid white;
+    border: 1px solid black;
     width: fit-content;
     align-self: flex-end;
     font-weight: 600;
     font-size: 22px;
     letter-spacing: 1px;
-}
-
-@media (max-width: 1000px) {
-    .projects-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+    color: black;
+    background-color: white;
 }

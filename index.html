@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Sean O'Neill - Portfolio</title>
     <link rel="stylesheet" type="text/css" href="reset.css" />
@@ -8,21 +9,21 @@
 </head>
 <body>
     <nav>
-        <a class="nav-link">About Me</a>
-        <a class="nav-link">Contact</a>
-        <a class="nav-link">Projects</a>
+        <a class="nav-link" href="#about-section">About Me</a>
+        <a class="nav-link" href="#contact-section">Contact</a>
+        <a class="nav-link" href="#projects-section">Projects</a>
     </nav>
     <header>
         <div class="header-text">
             <h1>Sean O'Neill</h1>
         </div>
         <div class="header-text">
-            <h3>Software Engineer</h3>
+            <div class="self-description">Software Engineer</div>
         </div>
     </header>
-    <section>
-        <div class="about-title">
-            <h2>About me</h2>
+    <section id="about-section">
+        <div class="about-title-container">
+            <h2 class="about-title">About me</h2>
         </div>
         <div class="about-me">
             <div class="about-me-content">
@@ -39,9 +40,20 @@
             </div>
         </div>
     </section>
-    <section>
+    <section id="projects-section">
         <h2>Projects</h2>
         <div class="projects-container">
+            <div class="project-item">
+                <div class="project-title">
+                    Super Fun Action Chess
+                </div>
+                <img src="assets/super-1.png" class="project-img">
+                <p>
+                    Mixing two incompatible genres for Ludum Dare, Action and Chess are smashed together to create
+                    this game. Keep clicking to win!
+                </p>
+                <a class="project-link" href="https://seancode.itch.io/beautifulcastledeathmachine">PLAY</a>
+            </div>
             <div class="project-item">
                 <div class="project-title">
                     Beautiful Castle Death Machine
@@ -76,7 +88,7 @@
             </div>
         </div>
     </section>
-    <section>
+    <section id="contact-section">
         <div class="">
             <h2>Contact</h2>
         </div>
